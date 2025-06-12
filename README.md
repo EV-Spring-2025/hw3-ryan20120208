@@ -29,28 +29,19 @@ Please complete Part 1–2 as described in the [Google Slides](https://docs.goog
 
 | Parameter | PSNR ↑ (dB) | YouTube video link |
 |-----------|------------:|--------------------|
-| **baseline**     | – |  – |
+| **original video**     | – |  – |
 | `n_grid = 10`    | 24.75 | [▶️](https://youtu.be/<VIDEO_ID_1>) |
 | `n_grid = 25`    | 24.86 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_2>) |
 | `n_grid = 40`    | 26.85 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_3>) |
-| `substep_dt = 1 × 10⁻³` | 28.55 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_4>) |
+| `substep_dt = 5 × 10⁻³` | 28.55 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_4>) |
 | `substep_dt = 2.5 × 10⁻⁴` | 31.00 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_5>) |
 | `damping = 0.8`  | 30.75 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_6>) |
 | `softening = 0.2`| 25.60 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_7>) |
 
+## Observation
+1. When n_grid is reduced, small oscillations of the branches become less pronounced and appear slightly blocky, yet the branches still spring back with noticeable elasticity.
+2. When substep_dt is reduced, the branches move less overall and their rebound feels noticeably weaker and softer.
 
-| Parameter | PSNR ↑ (dB) | Wall-time (s) |
-|--------------:|-------------|------------:|--------------:|
-| **baseline**  | – |  – | 48 | [`result`](output/baseline/result.mp4) |
-| `n_grid_10`   | `n_grid = 48`   | 31.02 | 30 | ▶️ |
-| `n_grid_25`   | `n_grid = 64`   | 31.27 | 48 | ▶️ |
-| `n_grid_40`   | `n_grid = 96`   | **32.45** | 105 | ▶️ |
-| `dt_1e-3`     | `substep_dt = 1e-3` | 28.55 | 24 | ▶️ |
-| `dt_2.5e-4`   | `substep_dt = 2.5e-4` | 31.00 | 90 | ▶️ |
-| `damp_0.8`    | `grid_v_damping_scale = 0.8` | 30.75 | 48 | ▶️ |
-| `damp_1.3`    | `grid_v_damping_scale = 1.3` | 29.10 | 48 | ▶️ |
-| `soft_0.2`    | `softening = 0.2` | 25.60 | 48 | ▶️ |
-| `soft_0.4`    | `softening = 0.4` | 22.50 | 48 | ▶️ |
 
 
 # Reference
