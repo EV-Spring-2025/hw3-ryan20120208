@@ -33,8 +33,8 @@ Please complete Part 1–2 as described in the [Google Slides](https://docs.goog
 | `n_grid = 10`    | 24.75 | [▶️](https://youtu.be/<VIDEO_ID_1>) |
 | `n_grid = 25`    | 24.86 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_2>) |
 | `n_grid = 40`    | 26.85 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_3>) |
-| `substep_dt = 5 × 10⁻³` | 28.55 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_4>) |
-| `substep_dt = 2.5 × 10⁻⁴` | 31.00 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_5>) |
+| `substep_dt = 7.5 × 10⁻³` | 28.55 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_4>) |
+| `substep_dt = $5 \times 10^{-5}$` | 31.00 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_5>) |
 | `damping = 0.8`  | 30.75 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_6>) |
 | `softening = 0.2`| 25.60 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_7>) |
 
