@@ -35,13 +35,14 @@ Please complete Part 1–2 as described in the [Google Slides](https://docs.goog
 | `n_grid = 40`    | 26.85 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_3>) |
 | `substep_dt = 7.5 × 10⁻⁵` | 26.59 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_4>) |
 | `substep_dt = 5 × 10⁻⁵` | 25.25 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_5>) |
-| `damping = 0.9998`  | 26.30 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_6>) |
-| `damping = 1.0001`  | 33.54 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_6>) |
+| `grid_v_damping_scale = 0.9998`  | 26.30 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_6>) |
+| `grid_v_damping_scale = 1.0001`  | 23.54 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_6>) |
 | `softening = 0.2`| 25.60 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_7>) |
 
-## Observation
+## Observations and Insights
 1. When n_grid is reduced, small oscillations of the branches become less pronounced and appear slightly blocky, yet the branches still spring back with noticeable elasticity.
 2. When substep_dt is reduced, the branches move less overall and their rebound feels noticeably weaker and softer.
+3. When damping is smaller the 
 
 
 
