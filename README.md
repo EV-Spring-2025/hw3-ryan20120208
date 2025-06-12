@@ -25,12 +25,12 @@ Follow the "Quick Start" section and execute the simulation scripts as instructe
 Please complete Part 1–2 as described in the [Google Slides](https://docs.google.com/presentation/d/13JcQC12pI8Wb9ZuaVV400HVZr9eUeZvf7gB7Le8FRV4/edit?usp=sharing).
 
 ## MPM parameter adjustment
-# jelly ()
+### jelly (model=ficus_whitebg-trained)
 
-| Parameter change | PSNR ↑ (dB) | YouTube video link |
-|------------------|------------:|--------------------|
+| Parameter | PSNR ↑ (dB) | YouTube video link |
+|-----------|------------:|--------------------|
 | **baseline**     | – |  – |
-| `n_grid = 10`    | 24.75 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_1>) |
+| `n_grid = 10`    | 24.75 | [▶️](https://youtu.be/<VIDEO_ID_1>) |
 | `n_grid = 25`    | 24.86 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_2>) |
 | `n_grid = 40`    | 26.85 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_3>) |
 | `substep_dt = 1 × 10⁻³` | 28.55 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_4>) |
