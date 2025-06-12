@@ -24,6 +24,21 @@ Follow the "Quick Start" section and execute the simulation scripts as instructe
 ## Homework Instructions
 Please complete Part 1–2 as described in the [Google Slides](https://docs.google.com/presentation/d/13JcQC12pI8Wb9ZuaVV400HVZr9eUeZvf7gB7Le8FRV4/edit?usp=sharing).
 
+## MPM parameter adjustment
+
+| Variant (tag) | Parameter Δ | PSNR ↑ (dB) | Wall-time (s) | Download |
+|--------------:|-------------|------------:|--------------:|:--------:|
+| **baseline**  | – |  – | 48 | [`result`](output/baseline/result.mp4) |
+| `n_grid_48`   | `n_grid = 48`   | 31.02 | 30 | ▶️ |
+| `n_grid_64`   | `n_grid = 64`   | 31.27 | 48 | ▶️ |
+| `n_grid_96`   | `n_grid = 96`   | **32.45** | 105 | ▶️ |
+| `dt_1e-3`     | `substep_dt = 1e-3` | 28.55 | 24 | ▶️ |
+| `dt_2.5e-4`   | `substep_dt = 2.5e-4` | 31.00 | 90 | ▶️ |
+| `damp_0.8`    | `grid_v_damping_scale = 0.8` | 30.75 | 48 | ▶️ |
+| `damp_1.3`    | `grid_v_damping_scale = 1.3` | 29.10 | 48 | ▶️ |
+| `soft_0.2`    | `softening = 0.2` | 25.60 | 48 | ▶️ |
+| `soft_0.4`    | `softening = 0.4` | 22.50 | 48 | ▶️ |
+
 
 # Reference
 ```bibtex
