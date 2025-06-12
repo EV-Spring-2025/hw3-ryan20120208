@@ -25,13 +25,26 @@ Follow the "Quick Start" section and execute the simulation scripts as instructe
 Please complete Part 1–2 as described in the [Google Slides](https://docs.google.com/presentation/d/13JcQC12pI8Wb9ZuaVV400HVZr9eUeZvf7gB7Le8FRV4/edit?usp=sharing).
 
 ## MPM parameter adjustment
+# jelly ()
 
-| Variant (tag) | Parameter Δ | PSNR ↑ (dB) | Wall-time (s) | Download |
-|--------------:|-------------|------------:|--------------:|:--------:|
+| Parameter change | PSNR ↑ (dB) | YouTube video link |
+|------------------|------------:|--------------------|
+| **baseline**     | – |  – |
+| `n_grid = 10`    | 24.75 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_1>) |
+| `n_grid = 25`    | 24.86 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_2>) |
+| `n_grid = 40`    | 26.85 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_3>) |
+| `substep_dt = 1 × 10⁻³` | 28.55 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_4>) |
+| `substep_dt = 2.5 × 10⁻⁴` | 31.00 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_5>) |
+| `damping = 0.8`  | 30.75 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_6>) |
+| `softening = 0.2`| 25.60 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_7>) |
+
+
+| Parameter | PSNR ↑ (dB) | Wall-time (s) |
+|--------------:|-------------|------------:|--------------:|
 | **baseline**  | – |  – | 48 | [`result`](output/baseline/result.mp4) |
-| `n_grid_48`   | `n_grid = 48`   | 31.02 | 30 | ▶️ |
-| `n_grid_64`   | `n_grid = 64`   | 31.27 | 48 | ▶️ |
-| `n_grid_96`   | `n_grid = 96`   | **32.45** | 105 | ▶️ |
+| `n_grid_10`   | `n_grid = 48`   | 31.02 | 30 | ▶️ |
+| `n_grid_25`   | `n_grid = 64`   | 31.27 | 48 | ▶️ |
+| `n_grid_40`   | `n_grid = 96`   | **32.45** | 105 | ▶️ |
 | `dt_1e-3`     | `substep_dt = 1e-3` | 28.55 | 24 | ▶️ |
 | `dt_2.5e-4`   | `substep_dt = 2.5e-4` | 31.00 | 90 | ▶️ |
 | `damp_0.8`    | `grid_v_damping_scale = 0.8` | 30.75 | 48 | ▶️ |
