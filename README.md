@@ -28,9 +28,8 @@ n_grid = 50, substep_dt = 1 × 10⁻⁴, grid_v_damping_scale = 0.9999, and soft
 
 To better understand the effect of each parameter, we conducted a series of ablation study, including lowering n_grid, reducing substep_dt, adjusting grid_v_damping_scale, and varying softening.
 
-
-| Parameter | PSNR (dB) | YouTube video link |
-|-----------|:---------:|:------------------:|
+| Parameter |  PSNR  | YouTube video link |
+|-----------|:------:|:------------------:|
 | **original baseline video**  | – | [▶️](https://www.youtube.com/watch?v=fOy0h40-om0) |
 | `n_grid = 10`    | 24.75 | [▶️](https://www.youtube.com/watch?v=UwEIv87cuHM) |
 | `n_grid = 25`    | 24.86 | [▶️](https://www.youtube.com/watch?v=8X7lun_OAK8) |
@@ -46,7 +45,7 @@ To better understand the effect of each parameter, we conducted a series of abla
 1. When n_grid is reduced, small oscillations of the branches become less pronounced and appear slightly blocky, but the branches still spring back with elasticit
 2. When substep_dt is reduced, the branches move less, and their rebound seems weaker and softer.
 3. When damping is smaller (<1), the movement of branches is smaller and weaker, while when damping is larger than one (>1), the movement of the branches becomes more exaggerated and faster, with increased bouncing and jittering.
-4. Adjusting the softening value appears to have little or no visible effect on the simulation outcome in this jelly model.
+4. Adjusting the softening value makes deformation smoother in this jelly model.
 
 ### 2. Sand (model=wolf_whitebg-trained)
 We start from the baseline original simulation parameter settings:
@@ -54,18 +53,18 @@ n_grid = 200, substep_dt = 2 × 10⁻⁵, grid_v_damping_scale = 1, and softenin
 
 To better understand the effect of each parameter, we conducted a series of ablation study, including lowering n_grid, reducing substep_dt, adjusting grid_v_damping_scale, and varying softening.
 
-| Parameter | PSNR (dB) | YouTube video link |
-|-----------|----------:|--------------------|
-| **original video**     | – | [▶️](https://youtu.be/<VIDEO_ID_1>)|
-| `n_grid = 180`    | 27.28 | [▶️](https://youtu.be/<VIDEO_ID_1>) |
-| `n_grid = 160`    | 25.70 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_2>) |
-| `n_grid = 100`    | 24.30 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_3>) |
-| `substep_dt = 1.5 × 10⁻⁵` | 31.36 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_4>) |
-| `substep_dt = 1 × 10⁻⁵` | 28.85 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_5>) |
-| `grid_v_damping_scale = 0.9995`  | 19.08 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_6>) |
-| `grid_v_damping_scale = 1.0003`  | 42.42 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_6>) |
-| `softening = 0.2`| 42.85 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_7>) |
-| `softening = 0.4`| 42.43 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_7>) |
+| Parameter |  PSNR  | YouTube video link |
+|-----------|:------:|:------------------:|
+| **original baseline video** | – | [▶️](https://www.youtube.com/watch?v=<VIDEO_ID_1>)|
+| `n_grid = 180`    | 27.28 | [▶️](https://www.youtube.com/watch?v=<VIDEO_ID_1>) |
+| `n_grid = 160`    | 25.70 | [Watch ↗︎](https://www.youtube.com/watch?v=<VIDEO_ID_2>) |
+| `n_grid = 100`    | 24.30 | [Watch ↗︎](https://www.youtube.com/watch?v=<VIDEO_ID_3>) |
+| `substep_dt = 1.5 × 10⁻⁵` | 31.36 | [Watch ↗︎](https://www.youtube.com/watch?v=<VIDEO_ID_4>) |
+| `substep_dt = 1 × 10⁻⁵` | 28.85 | [Watch ↗︎](https://www.youtube.com/watch?v=<VIDEO_ID_5>) |
+| `grid_v_damping_scale = 0.9995`  | 19.08 | [Watch ↗︎](https://www.youtube.com/watch?v=<VIDEO_ID_6>) |
+| `grid_v_damping_scale = 1.0003`  | 42.42 | [Watch ↗︎](https://www.youtube.com/watch?v=<VIDEO_ID_6>) |
+| `softening = 0.2`| 42.85 | [Watch ↗︎](https://www.youtube.com/watch?v=<VIDEO_ID_7>) |
+| `softening = 0.4`| 42.43 | [Watch ↗︎](https://www.youtube.com/watch?v=<VIDEO_ID_7>) |
 
 #### Observations and Insights
 1. When n_grid is reduced, the particle resolution becomes lower and the sand appears more blurry in the output video.
@@ -73,6 +72,11 @@ To better understand the effect of each parameter, we conducted a series of abla
 3. Smaller damping (<1) slows down the sand collapse, while larger damping (>1) speeds it up, making the collapse look faster. 
 4. Adjusting the softening value appears to have little or no visible effect on the simulation outcome in this sand model.
 
+## Key takeaway
+The ablation study reveals how simulation quality is influenced by key physical parameters. Reducing n_grid lowers spatial resolution, making video blurrier. Smaller substep_dt slows motion and increases stability, while changes in grid_v_damping_scale affect how quickly motion fades (<1 dampen movement, >1 amplify movement). In soft materials such as jelly, softening enhances smoothness of deformation, but has limited impact on hard materials like sand.
+
+## Bonus
+To extend PhysGaussian for unfamiliar materials, we can collect simulation data using known materials with predefined parameters, and train a neural network to map from observed behaviors (e.g., deformation, velocity fields, or rendered videos) to material properties such as elasticity, density, or friction. After training, the model can infer parameters for unfamiliar materials by observing how they behave, enabling PhysGaussian to generalize to novel scenarios without manual tuning.
 
 # Reference
 ```bibtex
