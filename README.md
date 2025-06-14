@@ -21,11 +21,8 @@ Navigate to the "PhysGaussian" directory and follow the instructions under the "
 Follow the "Quick Start" section and execute the simulation scripts as instructed. Make sure to verify your outputs and understand the role of physics constraints in the generated dynamics.
 
 
-## Homework Instructions
-Please complete Part 1–2 as described in the [Google Slides](https://docs.google.com/presentation/d/13JcQC12pI8Wb9ZuaVV400HVZr9eUeZvf7gB7Le8FRV4/edit?usp=sharing).
-
 ## MPM parameter adjustment
-### jelly (model=ficus_whitebg-trained)
+### 1. Jelly (model=ficus_whitebg-trained)
 
 | Parameter | PSNR (dB) | YouTube video link |
 |-----------|----------:|--------------------|
@@ -37,12 +34,35 @@ Please complete Part 1–2 as described in the [Google Slides](https://docs.goog
 | `substep_dt = 5 × 10⁻⁵` | 25.25 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_5>) |
 | `grid_v_damping_scale = 0.9998`  | 26.30 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_6>) |
 | `grid_v_damping_scale = 1.0001`  | 23.54 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_6>) |
-| `softening = 0.2`| 25.60 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_7>) |
+| `softening = 0.2`| 45.79 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_7>) |
+| `softening = 0.4`| 45.58 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_7>) |
 
-## Observations and Insights
-1. When n_grid is reduced, small oscillations of the branches become less pronounced and appear slightly blocky, yet the branches still spring back with noticeable elasticity.
-2. When substep_dt is reduced, the branches move less overall and their rebound feels noticeably weaker and softer.
-3. When damping is smaller the 
+#### Observations and Insights
+1. When n_grid is reduced, small oscillations of the branches become less pronounced and appear slightly blocky, but the branches still spring back with elasticit
+2. When substep_dt is reduced, the branches move less, and their rebound seems weaker and softer.
+3. When damping is smaller (<1), the movement of branches is smaller and weaker, while when damping is larger than one (>1), the movement of the branches becomes more exaggerated and faster, with increased bouncing and jittering.
+4. Adjusting the softening value appears to have little or no visible effect on the simulation outcome in this jelly model.
+
+### 2. Sand (model=wolf_whitebg-trained)
+
+| Parameter | PSNR (dB) | YouTube video link |
+|-----------|----------:|--------------------|
+| **original video**     | – | [▶️](https://youtu.be/<VIDEO_ID_1>)|
+| `n_grid = 180`    | 27.28 | [▶️](https://youtu.be/<VIDEO_ID_1>) |
+| `n_grid = 160`    | 25.70 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_2>) |
+| `n_grid = 100`    | 24.30 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_3>) |
+| `substep_dt = 1.5 × 10⁻⁵` | 31.36 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_4>) |
+| `substep_dt = 1 × 10⁻⁵` | 28.85 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_5>) |
+| `grid_v_damping_scale = 0.9995`  | 19.08 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_6>) |
+| `grid_v_damping_scale = 1.0003`  | 42.42 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_6>) |
+| `softening = 0.2`| 42.85 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_7>) |
+| `softening = 0.4`| 42.43 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_7>) |
+
+#### Observations and Insights
+1. When n_grid is reduced, the particle resolution becomes lower and the sand appears more blurry in the output video.
+2. When substep_dt is reduced, the wolf turns into sand more slowly, making the collapse look smoother.
+3. When damping is smaller (<1), the movement of branches is smaller and weaker, while when damping is larger than one (>1), the movement of the branches becomes more exaggerated and faster, with increased bouncing and jittering.
+4. Adjusting the softening value appears to have little or no visible effect on the simulation outcome in this sand model.
 
 
 
