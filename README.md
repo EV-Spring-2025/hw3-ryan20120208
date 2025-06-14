@@ -23,6 +23,11 @@ Follow the "Quick Start" section and execute the simulation scripts as instructe
 
 ## MPM parameter adjustment
 ### 1. Jelly (model=ficus_whitebg-trained)
+We start from the baseline original simulation parameter settings:
+n_grid = 50, substep_dt = 1 × 10⁻⁴, grid_v_damping_scale = 0.9999, and softening = 0.
+
+To better understand the effect of each parameter, we conducted a series of ablation study, including lowering n_grid, reducing substep_dt, adjusting grid_v_damping_scale, and varying softening.
+
 
 | Parameter | PSNR (dB) | YouTube video link |
 |-----------|----------:|--------------------|
@@ -44,6 +49,10 @@ Follow the "Quick Start" section and execute the simulation scripts as instructe
 4. Adjusting the softening value appears to have little or no visible effect on the simulation outcome in this jelly model.
 
 ### 2. Sand (model=wolf_whitebg-trained)
+We start from the baseline original simulation parameter settings:
+n_grid = 200, substep_dt = 2 × 10⁻⁵, grid_v_damping_scale = 1, and softening = 0.
+
+To better understand the effect of each parameter, we conducted a series of ablation study, including lowering n_grid, reducing substep_dt, adjusting grid_v_damping_scale, and varying softening.
 
 | Parameter | PSNR (dB) | YouTube video link |
 |-----------|----------:|--------------------|
@@ -61,9 +70,8 @@ Follow the "Quick Start" section and execute the simulation scripts as instructe
 #### Observations and Insights
 1. When n_grid is reduced, the particle resolution becomes lower and the sand appears more blurry in the output video.
 2. When substep_dt is reduced, the wolf turns into sand more slowly, making the collapse look smoother.
-3. When damping is smaller (<1), the movement of branches is smaller and weaker, while when damping is larger than one (>1), the movement of the branches becomes more exaggerated and faster, with increased bouncing and jittering.
+3. Smaller damping (<1) slows down the sand collapse, while larger damping (>1) speeds it up, making the collapse look faster. 
 4. Adjusting the softening value appears to have little or no visible effect on the simulation outcome in this sand model.
-
 
 
 # Reference
