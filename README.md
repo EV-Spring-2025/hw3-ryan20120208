@@ -31,16 +31,16 @@ To better understand the effect of each parameter, we conducted a series of abla
 
 | Parameter | PSNR (dB) | YouTube video link |
 |-----------|----------:|--------------------|
-| **original video**     | – |  – |
-| `n_grid = 10`    | 24.75 | [▶️](https://youtu.be/<VIDEO_ID_1>) |
-| `n_grid = 25`    | 24.86 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_2>) |
-| `n_grid = 40`    | 26.85 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_3>) |
-| `substep_dt = 7.5 × 10⁻⁵` | 26.59 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_4>) |
-| `substep_dt = 5 × 10⁻⁵` | 25.25 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_5>) |
-| `grid_v_damping_scale = 0.9998`  | 26.30 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_6>) |
-| `grid_v_damping_scale = 1.0001`  | 23.54 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_6>) |
-| `softening = 0.2`| 45.79 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_7>) |
-| `softening = 0.4`| 45.58 | [Watch ↗︎](https://youtu.be/<VIDEO_ID_7>) |
+| **original video**     | – | [▶️](https://www.youtube.com/watch?v=fOy0h40-om0) |
+| `n_grid = 10`    | 24.75 | [▶️](https://www.youtube.com/watch?v=UwEIv87cuHM) |
+| `n_grid = 25`    | 24.86 | [▶️](https://www.youtube.com/watch?v=8X7lun_OAK8) |
+| `n_grid = 40`    | 26.85 | [▶️](https://www.youtube.com/watch?v=_Ok7LFbb3T0) |
+| `substep_dt = 7.5 × 10⁻⁵` | 26.59 | [▶️](https://www.youtube.com/watch?v=YVhNPMzcsGU) |
+| `substep_dt = 5 × 10⁻⁵` | 25.25 | [Watch ↗︎](https://www.youtube.com/watch?v=HzeBczXLtnE) |
+| `grid_v_damping_scale = 0.9998`  | 26.30 | [Watch ↗︎](https://www.youtube.com/watch?v=<VIDEO_ID_6>) |
+| `grid_v_damping_scale = 1.0001`  | 23.54 | [Watch ↗︎](https://www.youtube.com/watch?v=<VIDEO_ID_6>) |
+| `softening = 0.2`| 45.79 | [Watch ↗︎](https://www.youtube.com/watch?v=<VIDEO_ID_7>) |
+| `softening = 0.4`| 45.58 | [Watch ↗︎](https://www.youtube.com/watch?v=<VIDEO_ID_7>) |
 
 #### Observations and Insights
 1. When n_grid is reduced, small oscillations of the branches become less pronounced and appear slightly blocky, but the branches still spring back with elasticit
