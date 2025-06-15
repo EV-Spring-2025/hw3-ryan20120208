@@ -72,7 +72,7 @@ To better understand the effect of each parameter, we conducted a series of abla
 3. Smaller damping (<1) slows down the sand collapse, while larger damping (>1) speeds it up, making the collapse look faster. 
 4. Adjusting the softening value appears to have little or no visible effect on the simulation outcome in this sand model.
 
-## Key takeaway
+## Key takeaways
 The ablation study reveals how key physical parameters influence simulation quality. Reducing n_grid lowers spatial resolution, making the video blurrier. Smaller substep_dt slows motion and increases stability, while changes in grid_v_damping_scale affect how quickly motion fades (<1 dampen movement, >1 amplify movement). In soft materials such as jelly, softening enhances the smoothness of deformation, but has a limited impact on hard materials like sand.
 
 ## Bonus
