@@ -38,11 +38,11 @@ To better understand the effect of each parameter, we conducted a series of abla
 | `substep_dt = 5 × 10⁻⁵` | 25.25 | [▶️](https://www.youtube.com/watch?v=HzeBczXLtnE) |
 | `grid_v_damping_scale = 0.9998`  | 26.30 | [▶️](https://www.youtube.com/watch?v=F8cEPdaan4E) |
 | `grid_v_damping_scale = 1.0001`  | 23.54 | [▶️](https://www.youtube.com/watch?v=Ht8tbs4Knr0) |
-| `softening = 0.2`| 45.79 | [▶️](https://www.youtube.com/watch?v=<VIDEO_ID_7>) |
-| `softening = 0.4`| 45.58 | [▶️](https://www.youtube.com/watch?v=<VIDEO_ID_7>) |
+| `softening = 0.2`| 45.79 | [▶️](https://www.youtube.com/watch?v=h9HqoR7MY8w) |
+| `softening = 0.4`| 45.58 | [▶️](https://www.youtube.com/watch?v=9XkbadZ3FY4) |
 
 #### Observations and Insights
-1. When n_grid is reduced, small oscillations of the branches become less pronounced and appear slightly blocky, but the branches still spring back with elasticit
+1. When n_grid is reduced, small oscillations of the branches become less pronounced and appear slightly blocky, but the branches still spring back with elasticity.
 2. When substep_dt is reduced, the branches move less, and their rebound seems weaker and softer.
 3. When damping is smaller (<1), the movement of branches is smaller and weaker, while when damping is larger than one (>1), the movement of the branches becomes more exaggerated and faster, with increased bouncing and jittering.
 4. Adjusting the softening value makes deformation smoother in this jelly model.
@@ -55,16 +55,16 @@ To better understand the effect of each parameter, we conducted a series of abla
 
 | Parameter |  PSNR  | YouTube video link |
 |-----------|:------:|:------------------:|
-| **original baseline video** | – | [▶️](https://www.youtube.com/watch?v=<VIDEO_ID_1>)|
-| `n_grid = 180`    | 27.28 | [▶️](https://www.youtube.com/watch?v=<VIDEO_ID_1>) |
-| `n_grid = 160`    | 25.70 | [Watch ↗︎](https://www.youtube.com/watch?v=<VIDEO_ID_2>) |
-| `n_grid = 100`    | 24.30 | [Watch ↗︎](https://www.youtube.com/watch?v=<VIDEO_ID_3>) |
-| `substep_dt = 1.5 × 10⁻⁵` | 31.36 | [Watch ↗︎](https://www.youtube.com/watch?v=<VIDEO_ID_4>) |
-| `substep_dt = 1 × 10⁻⁵` | 28.85 | [Watch ↗︎](https://www.youtube.com/watch?v=<VIDEO_ID_5>) |
-| `grid_v_damping_scale = 0.9995`  | 19.08 | [Watch ↗︎](https://www.youtube.com/watch?v=<VIDEO_ID_6>) |
-| `grid_v_damping_scale = 1.0003`  | 42.42 | [Watch ↗︎](https://www.youtube.com/watch?v=<VIDEO_ID_6>) |
-| `softening = 0.2`| 42.85 | [Watch ↗︎](https://www.youtube.com/watch?v=<VIDEO_ID_7>) |
-| `softening = 0.4`| 42.43 | [Watch ↗︎](https://www.youtube.com/watch?v=<VIDEO_ID_7>) |
+| **original baseline video** | – | [▶️](https://www.youtube.com/watch?v=4XxDa-p0iN4)|
+| `n_grid = 180`    | 27.28 | [▶️](https://www.youtube.com/watch?v=B-iviH1Nsx4) |
+| `n_grid = 160`    | 25.70 | [▶️](https://www.youtube.com/watch?v=Z8_UHPw8zrE) |
+| `n_grid = 100`    | 24.30 | [▶️](https://www.youtube.com/watch?v=XJa7GuWvxGc) |
+| `substep_dt = 1.5 × 10⁻⁵` | 31.36 | [▶️](https://www.youtube.com/watch?v=tJDuHR508fg) |
+| `substep_dt = 1 × 10⁻⁵` | 28.85 | [▶️](https://www.youtube.com/watch?v=Lr6qJ041jW0) |
+| `grid_v_damping_scale = 0.9995`  | 19.08 | [▶️](https://www.youtube.com/watch?v=_rystv6P1O4) |
+| `grid_v_damping_scale = 1.0003`  | 42.42 | [▶️](https://www.youtube.com/watch?v=ewKOyCEs6uo) |
+| `softening = 0.2`| 42.85 | [▶️](https://www.youtube.com/watch?v=T0yzhlwN4gs) |
+| `softening = 0.4`| 42.43 | [▶️](https://www.youtube.com/watch?v=UyZQta7p8aE) |
 
 #### Observations and Insights
 1. When n_grid is reduced, the particle resolution becomes lower and the sand appears more blurry in the output video.
